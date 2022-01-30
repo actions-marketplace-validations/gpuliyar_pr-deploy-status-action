@@ -1,0 +1,19 @@
+name: Pull request last deploy status
+author: gpuliyar
+description: Fetch the pull requests last deploy status and output it
+branding:
+  icon: git-pull-request
+  color: blue
+inputs:
+  repository:
+    description: Git repository name
+    required: true
+  environment:
+    description: Pull request deployment environment name
+    required: true
+outputs:
+  state:
+    description: Pull requests last deployed state of an environment
+runs:
+  using: node16
+  main: dist/index.js
