@@ -1,6 +1,6 @@
 # PR Deploy Status Github Action
 Github Action to fetch and output the PR's last deploy status to an environment. It is useful to developers to trigger a job only if the PR's last deployment to a PaaS was successful. 
-Note: Validated this feature as part of Github - Heroku continuous deployment. Another important factor to remember, when a code pushed to a PR, the PaaS deployment is async. If this action is used in a PR, then there is a high probability that this check will never give the intended result. It is recommended to use this check in a `repository_dispatch` check and trigger the flow as part of the code deployment - post deploy process.
+Note: Validated this feature as part of Github - Heroku continuous deployment. Another important factor to remember, when a code pushed to a PR, the PaaS deployment is async. If this action is used in a PR, then there is a high probability that this check will never give the intended result. It is recommended to use this check in a `repository_dispatch` flow and trigger the job as part of the code deployment - post deploy process.
 
 ## Inputs
 
